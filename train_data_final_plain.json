@@ -17,7 +17,7 @@
         "sarcasm_type": "I",
         "start_time": "00:03:23",
         "end_time": "00:04:01",
-        "emotion": "Frustrated"
+        "emotion": "Ridicule"
     },
     "2": {
         "episode_name": "38-Sibling Rivalry",
@@ -193,7 +193,7 @@
         "sarcasm_type": "I",
         "start_time": "00:12:18",
         "end_time": "00:12:30",
-        "emotion": "Disgust"
+        "emotion": "Ridicule"
     },
     "10": {
         "episode_name": "54-Poetry competition between Indravadan and Rosesh",
@@ -217,7 +217,7 @@
         "sarcasm_type": "I",
         "start_time": "00:00:16",
         "end_time": "00:00:34",
-        "emotion": "Frustrated"
+        "emotion": "Anger"
     },
     "11": {
         "episode_name": "40-Indravadan Hypnotized Part 1",
@@ -265,7 +265,7 @@
         "sarcasm_type": "I",
         "start_time": "00:01:05",
         "end_time": "00:01:27",
-        "emotion": "Frustrated"
+        "emotion": "Ridicule"
     },
     "13": {
         "episode_name": "43-Baldev and Sarupa's problems",
@@ -287,7 +287,7 @@
         "sarcasm_type": "I+P",
         "start_time": "00:16:41",
         "end_time": "00:16:56",
-        "emotion": "Exasperation"
+        "emotion": "Anger"
     },
     "14": {
         "episode_name": "56-Rosesh causes an accident",
@@ -309,7 +309,7 @@
         "sarcasm_type": "I",
         "start_time": "00:12:14",
         "end_time": "00:12:32",
-        "emotion": "Exasperation"
+        "emotion": "Anger"
     },
     "15": {
         "episode_name": "62-Rosesh's wedding plans",
@@ -333,7 +333,7 @@
         "sarcasm_type": "I",
         "start_time": "00:03:19",
         "end_time": "00:03:28",
-        "emotion": "Exasperation"
+        "emotion": "Anger"
     },
     "16": {
         "episode_name": "65-Vishal Guha's Party",
@@ -353,7 +353,7 @@
         "sarcasm_type": "I+P",
         "start_time": "00:06:29",
         "end_time": "00:06:55",
-        "emotion": "Frustrated"
+        "emotion": "Anger"
     },
     "17": {
         "episode_name": "47-Bachelorhood Back",
@@ -375,7 +375,7 @@
         "sarcasm_type": "I",
         "start_time": "00:02:11",
         "end_time": "00:02:32",
-        "emotion": "Exasperation"
+        "emotion": "Ridicule"
     },
     "18": {
         "episode_name": "46-Indravadan writes a play",
@@ -429,7 +429,7 @@
         "sarcasm_type": "I+P",
         "start_time": "00:02:06",
         "end_time": "00:02:23",
-        "emotion": "Infuriated"
+        "emotion": "Anger"
     },
     "21": {
         "episode_name": "36-Daughter-in-Law Day",
@@ -449,7 +449,7 @@
         "sarcasm_type": "I",
         "start_time": "00:00:21",
         "end_time": "00:00:32",
-        "emotion": "Infuriated"
+        "emotion": "Anger"
     },
     "22": {
         "episode_name": "15-Soniya's Prediction",
@@ -471,7 +471,7 @@
         "sarcasm_type": "I",
         "start_time": "00:10:30",
         "end_time": "00:10:47",
-        "emotion": "Neutral"
+        "emotion": "Surprise?"
     },
     "23": {
         "episode_name": "67-Monisha threatens to commit suicide",
@@ -491,7 +491,7 @@
         "sarcasm_type": "I+P",
         "start_time": "00:10:08",
         "end_time": "00:10:22",
-        "emotion": "Exasperation"
+        "emotion": "Anger"
     },
     "24": {
         "episode_name": "40-Indravadan Hypnotized Part 1",
@@ -535,7 +535,7 @@
         "sarcasm_type": "I+P",
         "start_time": "00:10:43",
         "end_time": "00:11:05",
-        "emotion": "Neutral"
+        "emotion": "Ridicule"
     },
     "26": {
         "episode_name": "47-Bachelorhood Back",
@@ -557,7 +557,7 @@
         "sarcasm_type": "I+P",
         "start_time": "00:14:00",
         "end_time": "00:14:25",
-        "emotion": "Exasperation"
+        "emotion": "Sad"
     },
     "27": {
         "episode_name": "16-Rosesh's Insomnia",
@@ -585,7 +585,7 @@
         "sarcasm_type": "I",
         "start_time": "00:07:42",
         "end_time": "00:07:56",
-        "emotion": "Neutral"
+        "emotion": "Ridicule"
     },
     "28": {
         "episode_name": "2-Dr Acharya to the Rescue!",
@@ -637,7 +637,7 @@
         "sarcasm_type": "I",
         "start_time": "00:14:51",
         "end_time": "00:15:32",
-        "emotion": "Ridicule"
+        "emotion": "Sad"
     },
     "30": {
         "episode_name": "1-Meet the Sarabhais",
@@ -655,7 +655,7 @@
         "sarcasm_type": "I",
         "start_time": "00:11:33",
         "end_time": "00:11:41",
-        "emotion": "Ridicule"
+        "emotion": "Sad"
     },
     "31": {
         "episode_name": "23-Seance to connect to Baa",
@@ -675,7 +675,7 @@
         "sarcasm_type": "I+P",
         "start_time": "00:06:46",
         "end_time": "00:06:59",
-        "emotion": "Exasperation"
+        "emotion": "Surprise"
     },
     "32": {
         "episode_name": "67-Monisha threatens to commit suicide",
@@ -721,7 +721,7 @@
         "sarcasm_type": "I+P",
         "start_time": "00:13:49",
         "end_time": "00:14:31",
-        "emotion": "Exasperation"
+        "emotion": "Anger"
     },
     "34": {
         "episode_name": "32-Maya and her maids",
@@ -743,7 +743,7 @@
         "sarcasm_type": "I+P",
         "start_time": "00:06:52",
         "end_time": "00:07:12",
-        "emotion": "Ridicule"
+        "emotion": "Anger"
     },
     "35": {
         "episode_name": "11-Maya's Cleanliness Drive",
@@ -775,7 +775,7 @@
         "sarcasm_type": "I",
         "start_time": "00:09:47",
         "end_time": "00:09:55",
-        "emotion": "Disgust"
+        "emotion": "Ridicule"
     },
     "37": {
         "episode_name": "11-Maya's Cleanliness Drive",
@@ -797,7 +797,7 @@
         "sarcasm_type": "I",
         "start_time": "00:08:15",
         "end_time": "00:08:37",
-        "emotion": "Frustrated"
+        "emotion": "Ridicule"
     },
     "38": {
         "episode_name": "70-Crystal Ball Time",
@@ -817,7 +817,7 @@
         "sarcasm_type": "I+P",
         "start_time": "00:03:20",
         "end_time": "00:03:35",
-        "emotion": "Exasperation"
+        "emotion": "Anger"
     },
     "39": {
         "episode_name": "14-Indravardhan's fantasies, foiled",
@@ -837,7 +837,7 @@
         "sarcasm_type": "I",
         "start_time": "00:18:47",
         "end_time": "00:18:58",
-        "emotion": "Exasperation"
+        "emotion": "Anger"
     },
     "40": {
         "episode_name": "19-Health Freak Indravadan",
@@ -881,7 +881,7 @@
         "sarcasm_type": "I+P",
         "start_time": "00:00:18",
         "end_time": "00:00:27",
-        "emotion": "Ridicule"
+        "emotion": "Anger"
     },
     "42": {
         "episode_name": "30-Gadget Freak Dushyant",
@@ -901,7 +901,7 @@
         "sarcasm_type": "I",
         "start_time": "00:17:39",
         "end_time": "00:17:52",
-        "emotion": "Exasperation"
+        "emotion": "Anger"
     },
     "43": {
         "episode_name": "27-Nuisance Value of Having a Dog",
@@ -965,7 +965,7 @@
         "sarcasm_type": "I+P",
         "start_time": "00:12:07",
         "end_time": "00:12:13",
-        "emotion": "Neutral"
+        "emotion": "Anger"
     },
     "46": {
         "episode_name": "4-Husbands do not Cheat",
@@ -997,7 +997,7 @@
         "sarcasm_type": "I",
         "start_time": "00:17:14",
         "end_time": "00:17:37",
-        "emotion": "Frustrated"
+        "emotion": "Ridicule"
     },
     "47": {
         "episode_name": "47-Bachelorhood Back",
@@ -1017,7 +1017,7 @@
         "sarcasm_type": "I+P",
         "start_time": "00:08:16",
         "end_time": "00:08:24",
-        "emotion": "Exasperation"
+        "emotion": "Ridicule"
     },
     "48": {
         "episode_name": "16-Rosesh's Insomnia",
@@ -1045,7 +1045,7 @@
         "sarcasm_type": "I+P",
         "start_time": "00:04:46",
         "end_time": "00:05:00",
-        "emotion": "Surprise"
+        "emotion": "Ridicule"
     },
     "49": {
         "episode_name": "53-Monisha's date with actor Karan",
@@ -1062,7 +1062,8 @@
         "sarcasm_target": "GENERAL",
         "sarcasm_type": "I+P",
         "start_time": "00:14:04",
-        "end_time": "00:14:16"
+        "end_time": "00:14:16",
+        "emotion": "Ridicule"
     },
     "50": {
         "episode_name": "6-Popat Lal",
@@ -1100,7 +1101,7 @@
         "sarcasm_type": "I+P",
         "start_time": "00:02:39",
         "end_time": "00:03:04",
-        "emotion": "Exasperation"
+        "emotion": "Anger"
     },
     "52": {
         "episode_name": "51-Rosesh's ode to Goldfish",
@@ -1123,7 +1124,8 @@
         "sarcasm_target": "ROSESH",
         "sarcasm_type": "I+P",
         "start_time": "00:18:01",
-        "end_time": "00:18:10"
+        "end_time": "00:18:10",
+        "emotion": "Anger"
     },
     "53": {
         "episode_name": "69-Brides for Rosesh",
@@ -1142,7 +1144,8 @@
         "sarcasm_target": "CHIKA",
         "sarcasm_type": "I",
         "start_time": "00:14:45",
-        "end_time": "00:14:50"
+        "end_time": "00:14:50",
+        "emotion": "Surprise"
     },
     "54": {
         "episode_name": "30-Gadget Freak Dushyant",
@@ -1167,7 +1170,8 @@
         "sarcasm_target": "DUSHYANT",
         "sarcasm_type": "I+P",
         "start_time": "00:16:53",
-        "end_time": "00:17:12"
+        "end_time": "00:17:12",
+        "emotion": "Anger"
     },
     "55": {
         "episode_name": "40-Indravadan Hypnotized Part 1",
@@ -1186,7 +1190,8 @@
         "sarcasm_target": "MONISHA",
         "sarcasm_type": "I",
         "start_time": "00:01:11",
-        "end_time": "00:01:22"
+        "end_time": "00:01:22",
+        "emotion": "Ridicule"
     },
     "56": {
         "episode_name": "41-Indravadan Hypnotized Part 2",
@@ -1211,7 +1216,8 @@
         "sarcasm_target": "MAYA",
         "sarcasm_type": "I",
         "start_time": "00:14:36",
-        "end_time": "00:15:01"
+        "end_time": "00:15:01",
+        "emotion": "Ridicule"
     },
     "57": {
         "episode_name": "51-Rosesh's ode to Goldfish",
@@ -1232,7 +1238,8 @@
         "sarcasm_target": "SAHIL",
         "sarcasm_type": "I+P",
         "start_time": "00:14:21",
-        "end_time": "00:14:44"
+        "end_time": "00:14:44",
+        "emotion": "Ridicule"
     },
     "58": {
         "episode_name": "1-Meet the Sarabhais",
@@ -1251,7 +1258,8 @@
         "sarcasm_target": "MONISHA",
         "sarcasm_type": "I+P",
         "start_time": "00:08:45",
-        "end_time": "00:09:40"
+        "end_time": "00:09:40",
+        "emotion": "Anger"
     },
     "59": {
         "episode_name": "8-Dance girls at the Sarabhais",
@@ -1268,7 +1276,8 @@
         "sarcasm_target": "DUSHYANT",
         "sarcasm_type": "I",
         "start_time": "00:13:16",
-        "end_time": "00:13:26"
+        "end_time": "00:13:26",
+        "emotion": "Surprise"
     },
     "60": {
         "episode_name": "53-Monisha's date with actor Karan",
@@ -1287,7 +1296,8 @@
         "sarcasm_target": "MAYA",
         "sarcasm_type": "I+P",
         "start_time": "00:15:44",
-        "end_time": "00:16:19"
+        "end_time": "00:16:19",
+        "emotion": "Ridicule"
     },
     "61": {
         "episode_name": "16-Rosesh's Insomnia",
