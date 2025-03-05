@@ -1,1 +1,3 @@
 # EmotionsInOurSarcasm
+EMOTIONS USED - RIDICULE, ANGER, SURPRISE, SAD.
+
