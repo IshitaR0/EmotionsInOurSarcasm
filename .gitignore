@@ -3,3 +3,12 @@ __pycache__
 .envrc
 .env
 venv/
+
+# Ignore specific files
+cc.hi.300.bin
+cc.hi.300.bin.gz
+
+# Ignore all `.pkl` files
+*.pkl
+
+dataset.json
