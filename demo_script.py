@@ -14,10 +14,17 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 import warnings
 warnings.filterwarnings('ignore')
+import re
+import json
+import nltk
+from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer
 
-# =====================================================
+# Download English stopwords if not available
+nltk.download('stopwords')
+
+
 # Step 1: Data Loading and Initial Exploration
-# =====================================================
 
 def load_data(json_file_path):
     """Load and format the dataset from a JSON file."""
@@ -58,9 +65,7 @@ def explore_dataset(df):
     
     return emotion_counts if 'emotion' in df.columns else None
 
-# =====================================================
 # Step 2: Text Cleaning and Normalization
-# =====================================================
 
 def clean_text(text):
     """Clean and normalize code-mixed text."""
