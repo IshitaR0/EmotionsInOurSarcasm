@@ -3,3 +3,7 @@ train_data_final_plain.json
 train.txt
 emotion_model.bin
 stop_hinglish.txt
+processed_data_advanced.csv
+features_advanced.csv
+fasttext_input_advanced.txt
+emotion_model_advanced.bin

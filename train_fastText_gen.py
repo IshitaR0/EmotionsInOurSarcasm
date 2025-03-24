@@ -366,9 +366,6 @@ if __name__ == "__main__":
         use_advanced_cleaning=use_advanced_cleaning
     )
 
-
-
-
 # If i use Unsupervised fasttext model for sentence vector embedding extraction and not training a classification model.
 # def train_unsupervised_fasttext(input_file, output_model_name="unsupervised_model.bin"):
 #     """Train an unsupervised FastText model to get sentence embeddings."""
