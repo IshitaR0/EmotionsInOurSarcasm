@@ -391,3 +391,63 @@ if __name__ == "__main__":
 #     X_features = np.array(X_features)
 #     print(f"Extracted embeddings shape: {X_features.shape}")
 #     return X_features
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.manifold import TSNE
+from sklearn.decomposition import PCA
+from collections import Counter
+
+def plot_embeddings(X_features, y_labels, method="tsne", perplexity=30, n_components=2, random_state=42):
+    """
+    Reduce the dimensionality of FastText sentence embeddings and visualize the clustering by emotion.
+
+    Parameters:
+        X_features (numpy.ndarray): Sentence embeddings.
+        y_labels (numpy.ndarray): Corresponding emotion labels.
+        method (str): Dimensionality reduction method ('tsne' or 'pca').
+        perplexity (int): Perplexity parameter for t-SNE (ignored if using PCA).
+        n_components (int): Number of dimensions to reduce to (default: 2).
+        random_state (int): Random seed for reproducibility.
+    """
+    print(f"Reducing dimensionality using {method.upper()}...")
+    
+    if method.lower() == "tsne":
+        reducer = TSNE(n_components=n_components, perplexity=perplexity, random_state=random_state)
+    elif method.lower() == "pca":
+        reducer = PCA(n_components=n_components, random_state=random_state)
+    else:
+        raise ValueError("Invalid method! Choose 'tsne' or 'pca'.")
+    
+    X_reduced = reducer.fit_transform(X_features)
+
+    # Convert to DataFrame for visualization
+    df_plot = pd.DataFrame(X_reduced, columns=['x', 'y'])
+    df_plot['emotion'] = y_labels
+
+    plt.figure(figsize=(10, 7))
+    sns.scatterplot(
+        x="x", y="y", hue="emotion", data=df_plot, palette="tab10", alpha=0.7, s=50, edgecolor="k"
+    )
+    plt.savefig("emotions_frequency.png")
+    
+    # Add emotion cluster labels if possible
+    most_common_emotions = [e[0] for e in Counter(y_labels).most_common()]
+    for emotion in most_common_emotions:
+        subset = df_plot[df_plot['emotion'] == emotion]
+        centroid_x = subset["x"].mean()
+        centroid_y = subset["y"].mean()
+        plt.text(centroid_x, centroid_y, emotion, fontsize=12, fontweight='bold', ha='center', va='center')
+
+    plt.title(f"Sentence Embeddings Visualization using {method.upper()}")
+    plt.xlabel("Component 1")
+    plt.ylabel("Component 2")
+    plt.legend(title="Emotions", bbox_to_anchor=(1.05, 1), loc="upper left")
+    plt.tight_layout()
+    plt.savefig("_graph_cluster_of_emotions.png")
+    plt.show()
+
+# Example usage
+plot_embeddings(X_features, y_labels, method="tsne")  # Use "pca" for PCA visualization
