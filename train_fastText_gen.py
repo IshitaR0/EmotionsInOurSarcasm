@@ -355,7 +355,7 @@ if __name__ == "__main__":
     # Set parameters
     json_file_path = "train_data_final_plain.json"
     hindi_stopwords_file = "stop_hinglish.txt"  # Set to None if not available
-    limit = 60  # Set to None to process all data
+    limit = 225  # Set to None to process all data
     use_advanced_cleaning = True  # Set to False to use simple cleaning
     
     # Run the pipeline
