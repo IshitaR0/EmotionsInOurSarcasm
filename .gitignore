@@ -1,0 +1,21 @@
+__pycache__
+.vscode
+.envrc
+.env
+venv/
+
+# Ignore specific files
+cc.hi.300.bin
+cc.hi.300.bin.gz
+
+# Ignore all `.pkl` files
+*.pkl
+# *.csv
+*.png 
+# *.txt
+*.bin
+*.npy
+dataset.json
+processed_data_advanced.csv
+unlabelled_texts.csv
+train_data_final_plain.json
