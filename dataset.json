@@ -1298,5 +1298,611 @@
         "start_time": "00:15:44",
         "end_time": "00:16:19",
         "emotion": "Ridicule"
+    },
+    "61": {
+        "episode_name": "16-Rosesh's Insomnia",
+        "target_speaker": "MAYA",
+        "target_utterance": "Okay.",
+        "context_speakers": [
+            "MONISHA"
+        ],
+        "context_utterances": [
+            "Mummy ji, Rosesh bhaiya ko meri umar lag jaae."
+        ],
+        "english_explanation": "Maya implies that Monisha's life is less important than Rosesh's",
+        "code_mixed_explanation": "Maya imply karti hai ki agar rosesh ko monisha ki umar lag gyi to wo sahi hoga",
+        "sarcasm_target": "MONISHA",
+        "sarcasm_type": "I",
+        "start_time": "00:14:41",
+        "end_time": "00:14:46",
+        "emotion": "Anger"
+    },
+    "62": {
+        "episode_name": "54-Poetry competition between Indravadan and Rosesh",
+        "target_speaker": "SAHIL",
+        "target_utterance": "Ek ek karke please!",
+        "context_speakers": [
+            "ANIRUDH",
+            "INDRAVARDHAN"
+        ],
+        "context_utterances": [
+            "Mujhe raajgaadi pe na bithao, nahi raja kabhi banna mujhe, mujhe mehengi cheeje nahi chaahiye, ye mango le lo, de do ganna mujhe...",
+            "Chappal maaru!?"
+        ],
+        "english_explanation": "Sahil is irritated by Anirudh",
+        "code_mixed_explanation": "Sahil anirudh se irritated hai",
+        "sarcasm_target": "ANIRUDH",
+        "sarcasm_type": "I+P",
+        "start_time": "00:09:18",
+        "end_time": "00:09:31",
+        "emotion": "Ridicule"
+    },
+    "63": {
+        "episode_name": "40-Indravadan Hypnotized Part 1",
+        "target_speaker": "SIDDHARTH",
+        "target_utterance": "Look Indu, ye koi teen patti ki game nahi hai!",
+        "context_speakers": [
+            "INDRAVARDHAN"
+        ],
+        "context_utterances": [
+            "Kyu, world famous hypnotist, kya hua haar gaye."
+        ],
+        "english_explanation": "Siddharth mocks Indravardhan that hypnotism is not easy like playing cards.",
+        "code_mixed_explanation": "Siddharth Indravardhan ko taunt maarta hai ki hypnotize karna teen patti khele ki tarah aasan nahi hai.",
+        "sarcasm_target": "INDRAVARDHAN",
+        "sarcasm_type": "I+P",
+        "start_time": "00:10:28",
+        "end_time": "00:10:34",
+        "emotion": "Anger"
+    },
+    "64": {
+        "episode_name": "17-Maya's bet with Monisha",
+        "target_speaker": "SAHIL",
+        "target_utterance": "Blue vaala pahaniye, is mein aap duble lagenge.",
+        "context_speakers": [
+            "INDRAVARDHAN",
+            "SAHIL",
+            "INDRAVARDHAN"
+        ],
+        "context_utterances": [
+            "Hi Sahil!",
+            "Hi dad!",
+            "Achchha.. ye to bata ye do mein se kaunsa achchha lagega?"
+        ],
+        "english_explanation": "Sahil implies that Indravardhan is fat.",
+        "code_mixed_explanation": "Sahil implies ki Indravardhan fat hai.",
+        "sarcasm_target": "INDRAVARDHAN",
+        "sarcasm_type": "I+P",
+        "start_time": "00:09:44",
+        "end_time": "00:09:54",
+        "emotion": "Ridicule"
+    },
+    "65": {
+        "episode_name": "70-Crystal Ball Time",
+        "target_speaker": "SAHIL",
+        "target_utterance": "Aisa khaana ho, to koi bhi chupa dega! Ye hai kya!?",
+        "context_speakers": [
+            "MONISHA",
+            "SAHIL",
+            "MONISHA"
+        ],
+        "context_utterances": [
+            "Thank God, khana mil gaya...",
+            "Iska matlab khana kho gaya tha?",
+            "Haan, vo Pinku hai na, bohot badmaash ho gayi hai aajkal! Aaj to uss kamini ne khaana tak chupa diya! Pinku bahar nikal bathroom se!"
+        ],
+        "english_explanation": "Sahil implies that Monisha makes bad food.",
+        "code_mixed_explanation": "Sahil implies ki Monisha achchha khaana nahi banaati.",
+        "sarcasm_target": "MONISHA",
+        "sarcasm_type": "I+P",
+        "start_time": "00:33:56",
+        "end_time": "00:34:19",
+        "emotion": "Sad"
+    },
+    "66": {
+        "episode_name": "48-Sharman gets bail",
+        "target_speaker": "ROSESH",
+        "target_utterance": "Hum log kya hai, Sharman, darvaaje se aate jaate hai na... to kabhi aisa khayaal hi nahi aya ki...",
+        "context_speakers": [
+            "SHARMAN",
+            "INDRAVARDHAN",
+            "SHARMAN"
+        ],
+        "context_utterances": [
+            "Impossible, uncle!",
+            "Sharman maine tum se kaha na, tum iss balcony se neeche nahi utar sakte! Iss building ki deevaare seedhi hai! Tum gir jaaoge!",
+            "Aisi useless building mein rehane ki kya jaroorat hai uncle! Aur notches kyu nahi hai bahar ki deevaar par!"
+        ],
+        "english_explanation": "Rosesh taunts Sharman for asking them to install notches on the walls of thier building.",
+        "code_mixed_explanation": "Rosesh Sharman ko unki building ke deevaaron par notches lagvaane ko kehne par taunt maarta hai.",
+        "sarcasm_target": "SHARMAN",
+        "sarcasm_type": "I+P",
+        "start_time": "00:11:26",
+        "end_time": "00:11:50",
+        "emotion": ""
+    },
+    "67": {
+        "episode_name": "52-Rosesh wants to be adopted",
+        "target_speaker": "INDRAVARDHAN",
+        "target_utterance": "Tere Paida hone se pahle? Aaye haye kya Suhane Din the kab lautenge ab pta nhi!",
+        "context_speakers": [
+            "ROSESH"
+        ],
+        "context_utterances": [
+            "Jo aapane dad ko likha tha mere Paida hone se pahle!"
+        ],
+        "english_explanation": "Indu indicates that since rosesh is born, there have been no good days",
+        "code_mixed_explanation": "Indu kehta hai ki rosesh ke paida hone ke baad suhane din khatam ho gye hai",
+        "sarcasm_target": "ROSESH",
+        "sarcasm_type": "I+P",
+        "start_time": "00:05:34",
+        "end_time": "00:05:45"
+    },
+    "68": {
+        "episode_name": "13-Prank on Indravadan",
+        "target_speaker": "INDRAVARDHAN",
+        "target_utterance": "hmm, me mard hun",
+        "context_speakers": [
+            "SAHIL"
+        ],
+        "context_utterances": [
+            "chaliye ye orange bonanza banane me meri madad kijiye."
+        ],
+        "english_explanation": "Indu indicates that since he is a man he won't do household chores",
+        "code_mixed_explanation": "Indu kehta hai ki wo mard hai to wo ghar ka kaam nhi karega",
+        "sarcasm_target": "INDRAVARDHAN",
+        "sarcasm_type": "I+P",
+        "start_time": "00:04:18",
+        "end_time": "00:04:23"
+    },
+    "69": {
+        "episode_name": "41-Indravadan Hypnotized Part 2",
+        "target_speaker": "SIDDHARTH",
+        "target_utterance": "Building vaalon ki bheed ko cheerate hue upar aane mein thoda waqt to lagega hi.",
+        "context_speakers": [
+            "SIDDHARTH",
+            "MAYA",
+            "MAYA"
+        ],
+        "context_utterances": [
+            "Maine tumhaare Indu ko apane, hypnotic spell se aazad kar diya hai.",
+            "Thank you!",
+            "Fir vo neeche kya kar raha hai!"
+        ],
+        "english_explanation": "Siddharth implies many people have surrounded Indu.",
+        "code_mixed_explanation": "Siddharth implies ki Indravardhan ke aaspaas bohot bheed hai.",
+        "sarcasm_target": "MAYA",
+        "sarcasm_type": "I",
+        "start_time": "00:16:32",
+        "end_time": "00:16:46"
+    },
+    "70": {
+        "episode_name": "51-Rosesh's ode to Goldfish",
+        "target_speaker": "INDRAVARDHAN",
+        "target_utterance": "Aray cheeku baba, pappa ko bye bye bolo. Kyu ki bohot jald hum papa ko paan ke beech mein rakh ke chaba jaane vaale hai.",
+        "context_speakers": [],
+        "context_utterances": [],
+        "english_explanation": "Indravardhan jokingly implies that Sahil is going to be in trouble.",
+        "code_mixed_explanation": "Indravardhan joke mein kahana chaahata hai ki Sahil mushkil mein padane vaala hai.",
+        "sarcasm_target": "SAHIL",
+        "sarcasm_type": "I+P",
+        "start_time": "00:14:21",
+        "end_time": "00:14:30"
+    },
+    "71": {
+        "episode_name": "11-Maya's Cleanliness Drive",
+        "target_speaker": "INDRAVARDHAN",
+        "target_utterance": "yah khargosh Tumne Khud Banaya",
+        "context_speakers": [
+            "MONISHA"
+        ],
+        "context_utterances": [
+            "yah dekhiae Mera khargosh itne Pyar Se is bathroom Mein Saja Ke Rakha tha Mummy Ji Ne Hata Diya Ja kehke ki Monisha it's very down market"
+        ],
+        "english_explanation": "Indaravadhan imples that Monisha is down market",
+        "code_mixed_explanation": "Indravadhan ko lagta hai ki Monisha down market hai",
+        "sarcasm_target": "MONISHA",
+        "sarcasm_type": "I",
+        "start_time": "00:15:16",
+        "end_time": "00:15:29"
+    },
+    "72": {
+        "episode_name": "13-Prank on Indravadan",
+        "target_speaker": "INDRAVARDHAN",
+        "target_utterance": "maya, kesa laga mera private and confidential gift",
+        "context_speakers": [
+            "MAYA"
+        ],
+        "context_utterances": [
+            "good. Ahhhh"
+        ],
+        "english_explanation": "Indu mocks maya for being the victim of his prank",
+        "code_mixed_explanation": "Indu maya ka mazak udata hai pagal banne ke liye",
+        "sarcasm_target": "MAYA",
+        "sarcasm_type": "I+P",
+        "start_time": "00:19:30",
+        "end_time": "00:19:48"
+    },
+    "73": {
+        "episode_name": "67-Monisha threatens to commit suicide",
+        "target_speaker": "INDRAVARDHAN",
+        "target_utterance": "suno suno suno I will give you a hint ok. Mai khush ho meri Chehre per Muskurahat hai. main Jungle Ki Hiran ki tarah Yahan Wahan kudak raha hoon. Mor Ki Tarah apni Pankh faila kar Nach raha hun.bolo bolo",
+        "context_speakers": [
+            "MAYA",
+            "INDRAVARDHAN",
+            "MAYA"
+        ],
+        "context_utterances": [
+            "Rosesh Rosesh, Indu tumne rosesh ko kahi dekha hain?",
+            "Mera Chehra Dekhkar Tumhen kya lagta hai",
+            "Rosesh"
+        ],
+        "english_explanation": "Indravardhan implies that since he is smiling he has not seen rosesh",
+        "code_mixed_explanation": "Indravardhan kehta hai ki kyunki wo khush hai usne rosesh ko nhi dekha hoga",
+        "sarcasm_target": "ROSESH",
+        "sarcasm_type": "I+P",
+        "start_time": "00:08:57",
+        "end_time": "00:09:20"
+    },
+    "74": {
+        "episode_name": "66-Monisha becomes sophisticated",
+        "target_speaker": "INDRAVARDHAN",
+        "target_utterance": "Lekin saath hi saath humarai vaali Monisha bhi chali gayi...",
+        "context_speakers": [
+            "INDRAVARDHAN",
+            "SAHIL"
+        ],
+        "context_utterances": [
+            "Aray waah Sahil! Tere ghar se kooda kachra, laaparvaahi, vo hostel ke gande kamare jaisa mahaul, chillam chilli, choohe, cockroach, sab chala gya, haan?",
+            "Vo to hai dad..."
+        ],
+        "english_explanation": "Indravardhan implies that Monisha has changed.",
+        "code_mixed_explanation": "Indravardhan implies ki Monisha change ho gayi hai.",
+        "sarcasm_target": "SAHIL",
+        "sarcasm_type": "I+P",
+        "start_time": "00:16:27",
+        "end_time": "00:16:43"
+    },
+    "75": {
+        "episode_name": "50-Indravardhan, Maya and married life",
+        "target_speaker": "MAYA",
+        "target_utterance": "Dil aa gaya gadhe pe to pari kya cheej hai.",
+        "context_speakers": [
+            "INDRAVARDHAN"
+        ],
+        "context_utterances": [
+            "Kamal hai. Ye moonchho vaali Parul ko 'Chikudi, peppermint, aur K Rustam ki ice-cream', kehata hai"
+        ],
+        "english_explanation": "Maya implies that Parul is a donkey.",
+        "code_mixed_explanation": "Maya kahana chaahati hai ki Parul gadhi hai.",
+        "sarcasm_target": "GENERAL",
+        "sarcasm_type": "I+P",
+        "start_time": "00:12:13",
+        "end_time": "00:12:21"
+    },
+    "76": {
+        "episode_name": "63-Kissme at the Sarabhais",
+        "target_speaker": "MAYA",
+        "target_utterance": "Oh cut it out Indu! In any case mujhe Rosesh ki fikar nahi hai. Vo aisi 'Mani Ben made in Jethpur' jaisi ladki ke saamne to aankh utha ke bhi nahi dekhega!",
+        "context_speakers": [
+            "MAYA",
+            "INDRAVARDHAN",
+            "MAYA",
+            "INDRAVARDHAN",
+            "MAYA",
+            "INDRAVARDHAN"
+        ],
+        "context_utterances": [
+            "This is the limit Indu! Aray Madhu bhai iss tarah apani bhatiji ko humaare yaha kaise chod sakte hai!?",
+            "Iss mein kya harj hai Maya?",
+            "Indravardhan, kunvaari ladki hai vo! I mean, hum responsibility kaise le? Humaare ghar mein ek handsome young young kunvaara ladka hai!",
+            "Chhat! Mai Kunvaara kaha hu!",
+            "Mai Rosesh ki baat kar rahi thi!",
+            "Oh haan, Rosesh Kunvaara hai, par vo handsome kaha hai!"
+        ],
+        "english_explanation": "Maya taunts that Rosesh wouldn't even look at ordinary middle class girls.",
+        "code_mixed_explanation": "Maya taunt maarti hai ki Rosesh kisi ordinary middle class ladki ki taraf aankh utha kar ke bhi nahi dekhega.",
+        "sarcasm_target": "KISMI",
+        "sarcasm_type": "I",
+        "start_time": "00:03:43",
+        "end_time": "00:04:17"
+    },
+    "77": {
+        "episode_name": "65-Vishal Guha's Party",
+        "target_speaker": "SAHIL",
+        "target_utterance": "I wanted to surprise you!",
+        "context_speakers": [
+            "MAYA",
+            "SAHIL",
+            "MAYA"
+        ],
+        "context_utterances": [
+            "Oh now I understand! Vishal Guha ne tumhe special party ke liye bulaya hai!?",
+            "Ji mom.",
+            "Aur tumne mujhe bataya nahi?"
+        ],
+        "english_explanation": "Sahil did not want Maya to know about the party.",
+        "code_mixed_explanation": "Sahil ko party ke baare mein Maya ko nahi batana tha.",
+        "sarcasm_target": "MAYA",
+        "sarcasm_type": "I",
+        "start_time": "00:04:02",
+        "end_time": "00:04:16"
+    },
+    "78": {
+        "episode_name": "53-Monisha's date with actor Karan",
+        "target_speaker": "SAHIL",
+        "target_utterance": "are lekin is dumping ground me pen kahan dhundu.",
+        "context_speakers": [
+            "MONISHA"
+        ],
+        "context_utterances": [
+            "oh my god, contest ka question sahil, jaldi likho na, likho na pen se, jaldi sahil pen, jaldi"
+        ],
+        "english_explanation": "Sahil compares their room to a dumping ground because it is very dirty",
+        "code_mixed_explanation": "Sahil apne room ko dumping ground se compare karta hai kyunki room itna ganda hai",
+        "sarcasm_target": "GENERAL",
+        "sarcasm_type": "I",
+        "start_time": "00:02:21",
+        "end_time": "00:02:31"
+    },
+    "79": {
+        "episode_name": "43-Baldev and Sarupa's problems",
+        "target_speaker": "MAYA",
+        "target_utterance": "This is even worse Indravardhan. I mean ye, \"Pch ,pch, slurp\" kar ke khaana khaana is classic middle class.",
+        "context_speakers": [
+            "MAYA",
+            "INDRAVARDHAN",
+            "MAYA",
+            "INDRAVARDHAN"
+        ],
+        "context_utterances": [
+            "Indravardhan.",
+            "Hmm.",
+            "Tum daal rice kha raheho ya Xylophone baja raheho. Kya hai ye sab, 'ting ting ting!'. Sounds so down market.",
+            "Okay."
+        ],
+        "english_explanation": "Maya mocks Indravardhan eating habits as middle class.",
+        "code_mixed_explanation": "Maya Indravardhan ke eating habits ko middle class kahati hai.",
+        "sarcasm_target": "INDRAVARDHAN",
+        "sarcasm_type": "I+P",
+        "start_time": "00:00:05",
+        "end_time": "00:00:34"
+    },
+    "80": {
+        "episode_name": "27-Nuisance Value of Having a Dog",
+        "target_speaker": "INDRAVARDHAN",
+        "target_utterance": "Waah giragit mausee waah.",
+        "context_speakers": [
+            "ROSESH",
+            "MAYA",
+            "INDRAVARDHAN",
+            "MAYA",
+            "ROSESH",
+            "MONISHA",
+            "MAYA",
+            "MONISHA"
+        ],
+        "context_utterances": [
+            "Aap kahe to mai apne room ke bahar ki nahi nikalunga Momma.",
+            "Aww.",
+            "Humesha ke liye?",
+            "That's so sweet of you darling, lekin par vo tum par julum hoga, ja kar ke dawa le lo tum, jaao.",
+            "Okay.",
+            "Mummy ji, mummy ji... chiii (sneeze)... sorry",
+            "Monisha please tum apne ghar jaao, aur kal subah tar bahar mat nikalna, jaao",
+            "Okay"
+        ],
+        "english_explanation": "Indravardhan mocks Maya as a chameleon for her double standards.",
+        "code_mixed_explanation": "Indravardhan Maya ko giragit keha ke uske double standards par taunt maarta hai.",
+        "sarcasm_target": "MAYA",
+        "sarcasm_type": "I+P",
+        "start_time": "00:02:57",
+        "end_time": "00:03:19"
+    },
+    "81": {
+        "episode_name": "38-Sibling Rivalry",
+        "target_speaker": "MAYA",
+        "target_utterance": "oh yeah fashion street se khareedi hui",
+        "context_speakers": [
+            "ROSESH"
+        ],
+        "context_utterances": [
+            "Naa sahil bhai ki belt bohot hi tacky hai momma"
+        ],
+        "english_explanation": "Maya makes fun of Sahil's belt",
+        "code_mixed_explanation": "Maya sahil ki belt ka mazak udati hai",
+        "sarcasm_target": "SAHIL",
+        "sarcasm_type": "I+P",
+        "start_time": "00:10:21",
+        "end_time": "00:10:29"
+    },
+    "82": {
+        "episode_name": "23-Seance to connect to Baa",
+        "target_speaker": "SAHIL",
+        "target_utterance": "baad me. jar hum jhopri pe jayenge na rahne ko, unha sunana. kyunki uha pe na TV hoga, na radio hoga. Toh isse behtar entertainment aur keya ho sakte hai!",
+        "context_speakers": [
+            "ROSESH",
+            "MAYA",
+            "SAHIL",
+            "ROSESH",
+            "INDRAVARDHAN",
+            "ROSESH"
+        ],
+        "context_utterances": [
+            "Eureka, eureka! Guys, look what I found!",
+            "Mil gaye!",
+            "Kya mil gaye papers lease ke?",
+            "Nahi, lekin momma aur dad ke marriage anniversary par maine jo kavita likhi thi, vo kisi ne mattresske niche chupa di thi. Vo mil gaye! Yay Whoopie!",
+            "sahil, maine jalane ko kaha tha na?",
+            "Abhi suna deta hu!"
+        ],
+        "english_explanation": "Sahil does not want to hear Rosesh's poem.",
+        "code_mixed_explanation": "Sahil ko Rosesh ki kavita nahi sunani.",
+        "sarcasm_target": "ROSESH",
+        "sarcasm_type": "I",
+        "start_time": "00:06:13",
+        "end_time": "00:06:45"
+    },
+    "83": {
+        "episode_name": "24-Baa Possesses Monisha",
+        "target_speaker": "INDRAVARDHAN",
+        "target_utterance": "Aray waah Monisha, iss saal ka best actress ka award tumhi ko milega!",
+        "context_speakers": [
+            "MONISHA"
+        ],
+        "context_utterances": [
+            "Hello, kaun?"
+        ],
+        "english_explanation": "Indravardhan implies that Monisha is doing very good acting.",
+        "code_mixed_explanation": "Indravardhan implies ki Monisha bohot achchhi acting kar rahi hai.",
+        "sarcasm_target": "MONISHA",
+        "sarcasm_type": "I",
+        "start_time": "00:10:09",
+        "end_time": "00:10:16"
+    },
+    "84": {
+        "episode_name": "36-Daughter-in-Law Day",
+        "target_speaker": "MAYA",
+        "target_utterance": "Nahin Nahin Nahin Monisha please ek Puri ke liye o bhagegi vel wale ki pichhe.usko Roko. kya kar raha ho Tumhen Aisi",
+        "context_speakers": [
+            "MONISHA"
+        ],
+        "context_utterances": [
+            "Are Mummy Ji bhaiya Ji Ne Iske 10 rupaye Liye aur extra Puri Nahin Dali Main Khud Hi jaati hun."
+        ],
+        "english_explanation": "Maya implies that is it not right to run after the bhel vendor for one puri",
+        "code_mixed_explanation": "Maya implies ki ek puri ke liye bhel wale ki pichhe bhagna sahi nhi",
+        "sarcasm_target": "MONISHA",
+        "sarcasm_type": "I",
+        "start_time": "00:02:19",
+        "end_time": "00:02:31"
+    },
+    "85": {
+        "episode_name": "41-Indravadan Hypnotized Part 2",
+        "target_speaker": "INDRAVARDHAN",
+        "target_utterance": "Thank God Indravardhan yaha nahi tha, varna tum to tumhaare daddy ko janate ho, jara theek thaak si ladaki dikhi ki laga flirt karane.",
+        "context_speakers": [
+            "INDRAVARDHAN",
+            "ROSESH"
+        ],
+        "context_utterances": [
+            "You know, kal raat to vo aurat is kamare mein ghus aae thi.",
+            "Oh my God! Really momma!"
+        ],
+        "english_explanation": "Indravardhan being Maya, taunts that Indravardhan flirts easily with any average looking girl.",
+        "code_mixed_explanation": "Indravardhan Maya hone ke kaaran taunt marta hai ki Indravardhan kisi bhi theek thaak dikhati ladki ke saath easily flirt karta hai.",
+        "sarcasm_target": "INDRAVARDHAN",
+        "sarcasm_type": "I",
+        "start_time": "00:13:38",
+        "end_time": "00:13:49"
+    },
+    "86": {
+        "episode_name": "30-Gadget Freak Dushyant",
+        "target_speaker": "INDRAVARDHAN",
+        "target_utterance": "Inko utha ke, mai balcony se bahar fek du?",
+        "context_speakers": [
+            "MADHUSUDAN",
+            "INDRAVARDHAN",
+            "MADHUSUDAN"
+        ],
+        "context_utterances": [
+            "Indu, light kyu band kar di tumne?",
+            "Madhu bhai, light maine band nahi ki.",
+            "Baat mat badal, bata light kyu band kar di?"
+        ],
+        "english_explanation": "Indravarshan is annoyed by Madhusudan's questions.",
+        "code_mixed_explanation": "Indravardhan Madhusudan ke questions se pareshaan hai.",
+        "sarcasm_target": "MADHUSUDAN",
+        "sarcasm_type": "I",
+        "start_time": "00:15:00",
+        "end_time": "00:15:10"
+    },
+    "87": {
+        "episode_name": "50-Indravardhan, Maya and married life",
+        "target_speaker": "MAYA",
+        "target_utterance": "Chi, imli is seriously middle class.",
+        "context_speakers": [
+            "MAYA",
+            "INDRAVARDHAN",
+            "MAYA",
+            "INDRAVARDHAN"
+        ],
+        "context_utterances": [
+            "Kyu, tum humaare hone vaale bachche ke baap nahi ho?",
+            "Haan, mai to bhool hi gaya.",
+            "Indu, kachchhi mango hogi ghar pe?",
+            "Nahi, lekin imli hai, laau?"
+        ],
+        "english_explanation": "Maya does not like imli.",
+        "code_mixed_explanation": "Maya ko imli pasand nahi.",
+        "sarcasm_target": "INDRAVARDHAN",
+        "sarcasm_type": "I+P",
+        "start_time": "00:18:12",
+        "end_time": "00:18:30"
+    },
+    "88": {
+        "episode_name": "51-Rosesh's ode to Goldfish",
+        "target_speaker": "MAYA",
+        "target_utterance": "Jab laughter classy ho tab.",
+        "context_speakers": [
+            "MAYA",
+            "MAYA",
+            "MAYA",
+            "ROSESH"
+        ],
+        "context_utterances": [
+            "No, I mean, Monisha door to door jaa ke, logonko jokes suna rahi hai! Votes jeetane ke chakkar mein.",
+            "Bruce Lee ki gujarathi bahan ka naam kya, 'Rootli'. Uhh, can you believe it.",
+            "Aur, surprising thing is, apani building vaale, hass rahe the aise jokes pe.",
+            "Momma, kisi ne sach hi kaha hai, laughter is the best medicine."
+        ],
+        "english_explanation": "Maya taunts that Monisha's jokes are not funny and classy.",
+        "code_mixed_explanation": "Maya taunt maarti hai ki Monisha ke jokes funny aur classy nahi hote.",
+        "sarcasm_target": "ROSESH",
+        "sarcasm_type": "I",
+        "start_time": "00:10:25",
+        "end_time": "00:10:47"
+    },
+    "89": {
+        "episode_name": "14-Indravardhan's fantasies, foiled",
+        "target_speaker": "INDRAVARDHAN",
+        "target_utterance": "To ho jaane de mujhe paagal!",
+        "context_speakers": [
+            "INDRAVARDHAN",
+            "INDRAVARDHAN",
+            "SAHIL"
+        ],
+        "context_utterances": [
+            "Tune notice nahi kiya, aajkal mai doodh peene lag gaya hu, salad chabama mujhe achchha lagta hai, Radhabai mujhe Madhubaala ki yaad dilati hai.",
+            "Pyaar nahi to aur kya hai yaar!",
+            "Paagal pan hai!"
+        ],
+        "english_explanation": "Indravardhan is angry with Sahil.",
+        "code_mixed_explanation": "Indravardhan Sahil par gussa hai.",
+        "sarcasm_target": "SAHIL",
+        "sarcasm_type": "I",
+        "start_time": "00:10:40",
+        "end_time": "00:10:57"
+    },
+    "90": {
+        "episode_name": "67-Monisha threatens to commit suicide",
+        "target_speaker": "INDRAVARDHAN",
+        "target_utterance": "Kamina kavi",
+        "context_speakers": [
+            "MAYA",
+            "ROSESH",
+            "MAYA"
+        ],
+        "context_utterances": [
+            "that's lyrical",
+            "Maaya to sophistication ka Pratik hai Maiya Tu Mamta ki hai Chhaya Sara Pyar Aata always Maya Maya.",
+            "I understood sweetie tum apna dudh Piyo"
+        ],
+        "english_explanation": "Indravardhan is angry on rosesh because he will have to drink milk because of him",
+        "code_mixed_explanation": "Indravardhan rosesh se gussa hai kyunki use uski wajah se dudh peena padega",
+        "sarcasm_target": "ROSESH",
+        "sarcasm_type": "I+P",
+        "start_time": "00:17:10",
+        "end_time": "00:17:35"
     }
 }
