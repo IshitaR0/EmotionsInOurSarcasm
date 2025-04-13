@@ -251,7 +251,7 @@ from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 
 # Load data
-text_embeddings = pd.read_csv("/Users/anjelica/EmotionsInOurSarcasm/Text/scripts/final_embeddings.csv")
+text_embeddings = pd.read_csv("Outputs/combined/final_textEmbed.csv")
 video_embeddings = pd.read_csv("/Users/anjelica/EmotionsInOurSarcasm/Video/Final_video_embeddings.csv")
 labels = pd.read_csv("/Users/anjelica/EmotionsInOurSarcasm/Text/scripts/labelled/y_labels.csv")
 

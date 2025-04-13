@@ -1,11 +1,12 @@
 import pandas as pd
 
-# Load the CSV file
-df = pd.read_csv("/Users/anjelica/EmotionsInOurSarcasm/Text/Features/scripts/labelled/features_advanced.csv")
+df = pd.read_csv("Outputs/combined/embeddings_advanced.csv")
 
-# Check if 'Utterance' column exists
+cols_to_drop = ['id', 'emotion', 'emotion_label', 'is_labeled']
+existing_cols = [col for col in cols_to_drop if col in df.columns]
+
+
 if 'emotion' in df.columns:
-    df = df.drop(columns=['emotion'])
+    df = df.drop(columns=existing_cols)
 
-# Save the updated CSV
-df.to_csv("embeddings_no_utterance.csv", index=False)
+df.to_csv("Outputs/combined/final_textEmbed.csv", index=False)

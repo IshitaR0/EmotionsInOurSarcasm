@@ -9,6 +9,12 @@ import unicodedata
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
 import nltk
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.manifold import TSNE
+from sklearn.decomposition import PCA
+from collections import Counter
+
 
 nltk.download('stopwords')
 
@@ -56,7 +62,7 @@ def load_unlabelled_data(json_path, start_index=651, end_index=893):
     return pd.DataFrame(rows)
 
 # 2. Save the text data to a file for training FastText
-def save_data_for_training(dataframe, output_file="training_data.txt", text_column="full_text"):
+def save_data_for_training(dataframe, output_file="Outputs/unlabeled/training_data.txt", text_column="full_text"):
     print(f"Saving cleaned text data for training FastText model...")
     with open(output_file, 'w', encoding='utf-8') as f:
         for text in dataframe[text_column]:
@@ -84,8 +90,60 @@ def extract_sentence_embeddings(model, dataframe, text_column="full_text"):
     print(f"Extracted embeddings shape: {embeddings.shape}")
     return embeddings
 
+# TO visualize the clusters
+
+def plot_embeddings(X_features, y_labels, method="tsne", perplexity=30, n_components=2, random_state=42):
+    """
+    Reduce the dimensionality of FastText sentence embeddings and visualize the clustering by emotion.
+
+    Parameters:
+        X_features (numpy.ndarray): Sentence embeddings.
+        y_labels (numpy.ndarray): Corresponding emotion labels.
+        method (str): Dimensionality reduction method ('tsne' or 'pca').
+        perplexity (int): Perplexity parameter for t-SNE (ignored if using PCA).
+        n_components (int): Number of dimensions to reduce to (default: 2).
+        random_state (int): Random seed for reproducibility.
+    """
+    print(f"Reducing dimensionality using {method.upper()}...")
+    
+    if method.lower() == "tsne":
+        reducer = TSNE(n_components=n_components, perplexity=perplexity, random_state=random_state)
+    elif method.lower() == "pca":
+        reducer = PCA(n_components=n_components, random_state=random_state)
+    else:
+        raise ValueError("Invalid method! Choose 'tsne' or 'pca'.")
+    
+    X_reduced = reducer.fit_transform(X_features)
+
+    # Convert to DataFrame for visualization
+    df_plot = pd.DataFrame(X_reduced, columns=['x', 'y'])
+    df_plot['emotion'] = y_labels
+
+    plt.figure(figsize=(10, 7))
+    sns.scatterplot(
+        x="x", y="y", hue="emotion", data=df_plot, palette="tab10", alpha=0.7, s=50, edgecolor="k"
+    )
+    plt.savefig("Outputs/unlabeled/emotions_frequency.png")
+    
+    # Add emotion cluster labels if possible
+    most_common_emotions = [e[0] for e in Counter(y_labels).most_common()]
+    for emotion in most_common_emotions:
+        subset = df_plot[df_plot['emotion'] == emotion]
+        centroid_x = subset["x"].mean()
+        centroid_y = subset["y"].mean()
+        plt.text(centroid_x, centroid_y, emotion, fontsize=12, fontweight='bold', ha='center', va='center')
+
+    plt.title(f"Sentence Embeddings Visualization using {method.upper()}")
+    plt.xlabel("Component 1")
+    plt.ylabel("Component 2")
+    plt.legend(title="Emotions", bbox_to_anchor=(1.05, 1), loc="upper left")
+    plt.tight_layout()
+    plt.savefig("Outputs/unlabeled/_graph_cluster_of_emotions.png")
+    plt.show()
+
+
 # 5. MAIN
-def main(json_path, output_file_for_training="training_data.txt", use_existing_model=False, pre_trained_model_path=None):
+def main(json_path, output_file_for_training="Outputs/unlabeled/training_data.txt", use_existing_model=False, pre_trained_model_path=None):
     print(f"Starting the main function with data from: {json_path}")
     
     # Load filtered unlabelled data
@@ -115,15 +173,22 @@ def main(json_path, output_file_for_training="training_data.txt", use_existing_m
     embeddings_df = pd.DataFrame(embeddings, columns=[f"dim_{i}" for i in range(embeddings.shape[1])])
 
     # Save to CSV
-    embeddings_df.to_csv("unlabelled_embeddings.csv", index=False)
-    print("Embeddings saved to unlabelled_embeddings.csv")
+    embeddings_df.to_csv("Outputs/unlabeled/unlabelled_embeddings.csv", index=False)
+    print("Embeddings saved to Outputs/unlabeled/unlabelled_embeddings.csv")
 
-    df.to_csv("unlabelled_texts.csv", index=False)
-    print("Text data saved to unlabelled_texts.csv")
+    df.to_csv("Outputs/unlabeled/unlabelled_texts.csv", index=False)
+    print("Text data saved to Outputs/unlabeled/unlabelled_texts.csv")
+    # Plot and save embedding clusters
+    y_labels = np.full(embeddings.shape[0], -1)
+    plot_embeddings(embeddings, y_labels)
 
     return embeddings, df
 
 # Run the script
 if __name__ == "__main__":
-    json_path = "/Users/anjelica/plaksha/mlpr/Project/train_data_final_plain.json" 
+    json_path = "Data/unlabeled_train_data.json" 
     embeddings, unlabelled_df = main(json_path)
+
+
+
+
