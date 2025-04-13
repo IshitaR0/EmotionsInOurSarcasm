@@ -1,3 +1,17 @@
 venv/
 Data/
 Embeddings/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints/
+.env/
+*.npy
+*.pt
+*.pkl
+*.csv
+*.h5
+*.ckpt
+*.log
+.vscode
