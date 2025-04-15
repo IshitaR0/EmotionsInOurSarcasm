@@ -129,7 +129,7 @@ def create_fasttext_file(dataframe, filename, text_column="text_cleaned", label_
             f.write(f"__label__{row[label_column]} {row[text_column]}\n")
     print(f"Created FastText input file: {filename}")
 
-def train_fasttext_model(input_file, output_model_name="emotion_model.bin", params=None):
+def train_fasttext_model(input_file, output_model_name="Outputs/emotion_model.bin", params=None):
     """
     Train a supervised FastText model with specified parameters.
     """
@@ -212,7 +212,7 @@ def main(train_data_file, test_data_file,
     create_fasttext_file(train_df, fasttext_train_file, text_column="text_cleaned", label_column="emotion")
     
     # --- 5. Train FastText Model on Training Data ---
-    ft_model = train_fasttext_model(fasttext_train_file, output_model_name="emotion_model.bin")
+    ft_model = train_fasttext_model(fasttext_train_file, output_model_name="Outputs/emotion_model.bin")
     
     # --- 6. Extract Embeddings from Both Training and Test Sets ---
     print("\nExtracting embeddings for training data...")
@@ -221,11 +221,11 @@ def main(train_data_file, test_data_file,
     print("\nExtracting embeddings for test data...")
     X_test_features, y_test_labels = extract_features(ft_model, test_df, text_column="text_cleaned")
     
-    # Optionally, save the embeddings to CSV files.
-    pd.DataFrame(X_train_features).to_csv("features_train.csv", index=False)
-    pd.DataFrame(X_test_features).to_csv("features_test.csv", index=False)
-    pd.DataFrame(y_train_labels, columns=['emotion']).to_csv("y_train_labels.csv", index=False)
-    pd.DataFrame(y_test_labels, columns=['emotion']).to_csv("y_test_labels.csv", index=False)
+    # Save the embeddings to CSV files.
+    pd.DataFrame(X_train_features).to_csv("Outputs/Direct_fasttext_emb/train_features.csv", index=False)
+    pd.DataFrame(X_test_features).to_csv("Outputs/Direct_fasttext_emb/test_features.csv", index=False)
+    pd.DataFrame(y_train_labels, columns=['emotion']).to_csv("Outputs/Direct_fasttext_emb/y_train_labels.csv", index=False)
+    pd.DataFrame(y_test_labels, columns=['emotion']).to_csv("Outputs/Direct_fasttext_emb/y_test_labels.csv", index=False)
     
     print("\nPipeline Completed Successfully!")
     return {
@@ -261,7 +261,7 @@ def plot_embeddings(X_features, y_labels, method="tsne", perplexity=30, n_compon
     plt.ylabel("Component 2")
     plt.legend(title="Emotions", bbox_to_anchor=(1.05, 1), loc="upper left")
     plt.tight_layout()
-    plt.savefig("embedding_cluster.png")
+    plt.savefig("Outputs/Images/embedding_cluster.png")
     plt.show()
 
 # --- Example Usage ---
