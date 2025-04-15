@@ -19,3 +19,6 @@ dataset.json
 processed_data_advanced.csv
 unlabelled_texts.csv
 train_data_final_plain.json
+Data/
+Embeddings/
+utils_video/
