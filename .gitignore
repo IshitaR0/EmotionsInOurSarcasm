@@ -23,3 +23,5 @@ Data/
 Embeddings/
 utils_video/
 Data/
+Outputs/Direct_fasttext_emb
+fasttext_input_train.txt

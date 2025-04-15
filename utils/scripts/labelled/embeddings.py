@@ -117,6 +117,50 @@ def print_text_comparison(original_text, cleaned_text):
     print("\nRemoved Words:")
     print(removed_words)
 
+def create_dataframe(data, limit=None):
+    """Create a dataframe from the loaded JSON data with error handling."""
+    processed_examples = []
+    count = 0
+    for id, instance in data.items():
+        if limit is not None and count >= limit:
+            break
+            
+        # Check if required fields exist
+        if "target_utterance" not in instance:
+            print(f"Skipping instance {id}: missing 'target_utterance'")
+            continue
+            
+        if "emotion" not in instance:
+            print(f"Skipping instance {id}: missing 'emotion'")
+            continue
+            
+        text = instance["target_utterance"]
+        context = " ".join(instance["context_utterances"]) if "context_utterances" in instance else ""
+        emotion = instance["emotion"]
+        
+        if emotion not in emotion_mapping:
+            print(f"Skipping instance {id}: unknown emotion '{emotion}'")
+            continue
+            
+        full_text = context + " " + text
+        processed_examples.append({
+            "text": full_text,
+            "emotion": emotion_mapping[emotion],
+            "target_utterance": text,
+            "context_utterances": context,
+            "full_text": full_text
+        })
+        count += 1
+    
+    if not processed_examples:
+        raise ValueError("No valid instances found in the data!")
+        
+    df = pd.DataFrame(processed_examples)
+    print(f"Created DataFrame with {len(df)} entries and {df.shape[1]} columns")
+    print(df.head())
+    
+    return df
+
 # --- Functions for FastText ---
 def create_fasttext_file(dataframe, filename, text_column="text_cleaned", label_column="emotion"):
     """
@@ -185,9 +229,12 @@ def main(train_data_file, test_data_file,
     """
     # --- 1. Load Data (assume CSV format) ---
     # Files should contain a column that holds the text (e.g. "text") and another holding labels
-    train_df = pd.read_csv(train_data_file)
-    test_df = pd.read_csv(test_data_file)
+    train_data = pd.read_json(train_data_file)
+    test_data = pd.read_json(test_data_file)
     
+    train_df = create_dataframe(train_data)
+    test_df = create_dataframe(test_data)
+
     print("Training data sample:")
     print(train_df.head())
     print("\nTest data sample:")
@@ -268,7 +315,7 @@ def plot_embeddings(X_features, y_labels, method="tsne", perplexity=30, n_compon
 if __name__ == "__main__":
     # Set file paths for training and test data and labels.
     train_data_file = "Data/labeled_train_data.json"      # CSV with a column "text"
-    test_data_file = "Data/test_data.csv"          # CSV with a column "text"
+    test_data_file = "Data/test_data.json"          # CSV with a column "text"
     
     # Set additional parameters
     hindi_stopwords_file = None    # Provide path if you have Hindi stopwords file
@@ -281,7 +328,7 @@ if __name__ == "__main__":
         use_advanced_cleaning=use_advanced_cleaning
     )
     
-    # Plot embeddings for test data
+    plot_embeddings(results["X_train"], results["y_train"], method="tsne")
     plot_embeddings(results["X_test"], results["y_test"], method="tsne")
 
 # ____________________________________________________________________________________________
