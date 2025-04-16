@@ -70,17 +70,6 @@ plt.title("Confusion Matrix")
 plt.savefig("Model_0/Output/Confusion_matrix.png")
 plt.show()
 
-# If you know the class names and want to add them to the confusion matrix:
-# class_labels = ["Class 0", "Class 1", "Class 2"]  # Replace with actual class names
-# plt.figure(figsize=(8,6))
-# sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', 
-#             xticklabels=class_labels, yticklabels=class_labels)
-# plt.xlabel("Predicted")
-# plt.ylabel("True")
-# plt.title("Confusion Matrix")
-# plt.show()
-
-
 # ______________________________________________
 # import numpy as np
 # import pandas as pd

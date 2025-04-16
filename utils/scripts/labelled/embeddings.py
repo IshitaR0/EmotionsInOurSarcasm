@@ -216,8 +216,7 @@ def extract_features(model, dataframe, text_column="text_cleaned"):
     return X_features, y_labels
 
 # --- Main Pipeline ---
-def main(train_data_file, test_data_file, 
-         hindi_stopwords_file=None, use_advanced_cleaning=True):
+def main(train_data_file, test_data_file, hindi_stopwords_file=None, use_advanced_cleaning=True):
     """
     Complete pipeline when data and labels are provided separately:
      1. Load training and test data (and labels) from CSV files.
