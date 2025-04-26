@@ -13,7 +13,8 @@ cc.hi.300.bin.gz
 # *.csv
 # *.txt
 *.bin
-*.npy
+*.pt
+# *.npy
 dataset.json
 processed_data_advanced.csv
 unlabelled_texts.csv
