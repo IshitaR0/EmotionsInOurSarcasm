@@ -15,13 +15,18 @@ cc.hi.300.bin.gz
 *.bin
 *.pt
 # *.npy
+*.json
 dataset.json
 processed_data_advanced.csv
 unlabelled_texts.csv
 train_data_final_plain.json
-Data/
-Embeddings/
+# Data/
+# Embeddings/
 utils_video/
-Data/
-Outputs/Direct_fasttext_emb
+# Data/
+Outputs/
+missing.py
+model.py
+missing
+raw
 fasttext_input_train.txt

@@ -216,74 +216,75 @@ def extract_features(model, dataframe, text_column="text_cleaned"):
     return X_features, y_labels
 
 # --- Main Pipeline ---
-def main(train_data_file, test_data_file, hindi_stopwords_file=None, use_advanced_cleaning=True):
+def main(train_data_file, val_data_file, test_data_file, hindi_stopwords_file=None, use_advanced_cleaning=True):
     """
     Complete pipeline when data and labels are provided separately:
-     1. Load training and test data (and labels) from CSV files.
-     2. Merge them into a single DataFrame per split.
-     3. Preprocess text.
-     4. Create a FastText input file from the training data only.
-     5. Train a supervised FastText model on training data.
-     6. Extract embeddings on both training and test sets.
+     1. Load training, validation, and test data from JSON files.
+     2. Preprocess text.
+     3. Create FastText input file from training data only.
+     4. Train FastText model.
+     5. Extract embeddings for train, validation, and test sets.
     """
-    # --- 1. Load Data (assume CSV format) ---
-    # Files should contain a column that holds the text (e.g. "text") and another holding labels
+    # --- 1. Load Data ---
     train_data = pd.read_json(train_data_file)
+    val_data = pd.read_json(val_data_file)
     test_data = pd.read_json(test_data_file)
-    
+
     train_df = create_dataframe(train_data)
+    val_df = create_dataframe(val_data)
     test_df = create_dataframe(test_data)
 
-    print("Training data sample:")
-    print(train_df.head())
-    print("\nTest data sample:")
-    print(test_df.head())
-    
-    # Convert emotion labels from text form to numeric mapping
-    if train_df['emotion'].dtype == object:
-        train_df['emotion'] = train_df['emotion'].map(emotion_mapping)
-    if test_df['emotion'].dtype == object:
-        test_df['emotion'] = test_df['emotion'].map(emotion_mapping)
-    
-    # --- 3. Preprocess Text ---
+    # Convert emotion labels to numeric if needed
+    for df in [train_df, val_df, test_df]:
+        if df['emotion'].dtype == object:
+            df['emotion'] = df['emotion'].map(emotion_mapping)
+
+    # --- 2. Preprocess Text ---
     cleaning_func = clean_text_advanced if use_advanced_cleaning else simple_clean_text
-    train_df['text_cleaned'] = train_df['text'].apply(lambda x: cleaning_func(x, hindi_stopwords_file=hindi_stopwords_file))
-    test_df['text_cleaned'] = test_df['text'].apply(lambda x: cleaning_func(x, hindi_stopwords_file=hindi_stopwords_file))
-    
+    for df in [train_df, val_df, test_df]:
+        df['text_cleaned'] = df['text'].apply(lambda x: cleaning_func(x, hindi_stopwords_file=hindi_stopwords_file))
+
     print("\nSample text cleaning (Train Data):")
     print_text_comparison(train_df['text'].iloc[0], train_df['text_cleaned'].iloc[0])
-    
-    # --- 4. Create FastText Input File from Training Data ---
+
+    # --- 3. Create FastText Input File from Training Data Only ---
     fasttext_train_file = "fasttext_input_train.txt"
     create_fasttext_file(train_df, fasttext_train_file, text_column="text_cleaned", label_column="emotion")
-    
-    # --- 5. Train FastText Model on Training Data ---
+
+    # --- 4. Train FastText Model ---
     ft_model = train_fasttext_model(fasttext_train_file, output_model_name="Outputs/emotion_model.bin")
-    
-    # --- 6. Extract Embeddings from Both Training and Test Sets ---
+
+    # --- 5. Extract Embeddings ---
     print("\nExtracting embeddings for training data...")
-    X_train_features, y_train_labels = extract_features(ft_model, train_df, text_column="text_cleaned")
-    
+    X_train_features, y_train_labels = extract_features(ft_model, train_df)
+
+    print("\nExtracting embeddings for validation data...")
+    X_val_features, y_val_labels = extract_features(ft_model, val_df)
+
     print("\nExtracting embeddings for test data...")
-    X_test_features, y_test_labels = extract_features(ft_model, test_df, text_column="text_cleaned")
-    
-    # Save the embeddings to CSV files.
+    X_test_features, y_test_labels = extract_features(ft_model, test_df)
+
+    # --- 6. Save All Embeddings ---
     pd.DataFrame(X_train_features).to_csv("Outputs/Direct_fasttext_emb/train_features.csv", index=False)
-    pd.DataFrame(X_test_features).to_csv("Outputs/Direct_fasttext_emb/test_features.csv", index=False)
     pd.DataFrame(y_train_labels, columns=['emotion']).to_csv("Outputs/Direct_fasttext_emb/y_train_labels.csv", index=False)
+
+    pd.DataFrame(X_val_features).to_csv("Outputs/Direct_fasttext_emb/val_features.csv", index=False)
+    pd.DataFrame(y_val_labels, columns=['emotion']).to_csv("Outputs/Direct_fasttext_emb/y_val_labels.csv", index=False)
+
+    pd.DataFrame(X_test_features).to_csv("Outputs/Direct_fasttext_emb/test_features.csv", index=False)
     pd.DataFrame(y_test_labels, columns=['emotion']).to_csv("Outputs/Direct_fasttext_emb/y_test_labels.csv", index=False)
+
+    print("\n✅ All embeddings and labels saved.")
     
-    print("\nPipeline Completed Successfully!")
+    # Return a dictionary with all the features and labels
     return {
-        "train_df": train_df,
-        "test_df": test_df,
-        "ft_model": ft_model,
         "X_train": X_train_features,
         "y_train": y_train_labels,
+        "X_val": X_val_features,
+        "y_val": y_val_labels,
         "X_test": X_test_features,
         "y_test": y_test_labels
     }
-
 def plot_embeddings(X_features, y_labels, method="tsne", perplexity=30, n_components=2, random_state=42):
     """
     Reduce dimensionality using TSNE (or PCA) and visualize clustering by emotion.
@@ -313,23 +314,27 @@ def plot_embeddings(X_features, y_labels, method="tsne", perplexity=30, n_compon
 # --- Example Usage ---
 if __name__ == "__main__":
     # Set file paths for training and test data and labels.
-    train_data_file = "Data/labeled_train_data.json"      # CSV with a column "text"
-    test_data_file = "Data/test_data.json"          # CSV with a column "text"
-    
+    train_data_file = "/Users/anjelica/Downloads/labeled_train_datafinal.json"      # CSV with a column "text"
+    test_data_file = "/Users/anjelica/Downloads/test_data.json"          # CSV with a column "text"
+    val_data_file = "/Users/anjelica/Downloads/val_data (1).json"
     # Set additional parameters
     hindi_stopwords_file = None    # Provide path if you have Hindi stopwords file
     use_advanced_cleaning = True   # Change to False to use simple cleaning
     
     results = main(
         train_data_file=train_data_file,
+        val_data_file=val_data_file,
         test_data_file=test_data_file,
         hindi_stopwords_file=hindi_stopwords_file,
         use_advanced_cleaning=use_advanced_cleaning
     )
     
-    plot_embeddings(results["X_train"], results["y_train"], method="tsne")
-    plot_embeddings(results["X_test"], results["y_test"], method="tsne")
-
+    # Check if results is not None before trying to access its elements
+    if results is not None:
+        plot_embeddings(results["X_train"], results["y_train"], method="tsne")
+        plot_embeddings(results["X_test"], results["y_test"], method="tsne")
+    else:
+        print("No results returned from main() function. Skipping plotting.")
 # ____________________________________________________________________________________________
 
 # import re
