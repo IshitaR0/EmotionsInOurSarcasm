@@ -46,7 +46,8 @@ def preprocess_features(train_text_path, val_text_path, test_text_path,
     val_video = pd.read_csv(val_video_path).values
     test_video = pd.read_csv(test_video_path).values
 
-    text_scaler = StandardScaler().fit(train_text)
+    ## to normalize features to have zero mean and unit variance
+    text_scaler = StandardScaler().fit(train_text) 
     video_scaler = StandardScaler().fit(train_video)
 
     train_text_scaled = text_scaler.transform(train_text)
@@ -77,7 +78,7 @@ def preprocess_features(train_text_path, val_text_path, test_text_path,
             train_video_reduced, val_video_reduced, test_video_reduced)
 
 # ─── DATASET ─────────────────────────────────────────────────
-
+# torch.tensor is a function in the PyTorch library used to create tensors, which are fundamental data structures for numerical computation and deep learning.
 class MultimodalDataset(Dataset):
     def __init__(self, text_features, video_features, labels=None):
         self.text_features = torch.tensor(text_features, dtype=torch.float32)
@@ -96,13 +97,14 @@ class MultimodalDataset(Dataset):
             return self.text_features[idx], self.video_features[idx]
 
 # ─── MODEL COMPONENTS ─────────────────────────────────────────
-
+# This encoder transforms raw text features into a compact hidden representation using a fully connected layer, batch normalization, activation, and dropout.
 class SimplifiedTextEncoder(nn.Module):
+    # PyTorch's nn.Module. All neural networks in PyTorch are subclasses of nn.Module
     def __init__(self, input_dim):
         super().__init__()
-        self.fc1 = nn.Linear(input_dim, TEXT_HID_DIM)
-        self.bn1 = nn.BatchNorm1d(TEXT_HID_DIM)
-        self.dropout = nn.Dropout(DROPOUT_RATE)
+        self.fc1 = nn.Linear(input_dim, TEXT_HID_DIM) ## Defines a fully connected (dense) layer.It maps the input features of dimension input_dim to a hidden dimension TEXT_HID_DIM (64 -> 32)
+        self.bn1 = nn.BatchNorm1d(TEXT_HID_DIM) ## applies batch normalization across 32 neurons to keep them closer to zero mean and unit variance
+        self.dropout = nn.Dropout(DROPOUT_RATE) ## drops 60 % of the output neurons during training.
 
     def forward(self, x):
         x = self.fc1(x)
@@ -113,7 +115,7 @@ class SimplifiedTextEncoder(nn.Module):
 class SimplifiedVideoEncoder(nn.Module):
     def __init__(self, input_dim):
         super().__init__()
-        self.fc1 = nn.Linear(input_dim, VIDEO_HID_DIM)
+        self.fc1 = nn.Linear(input_dim, VIDEO_HID_DIM) #  # 256D → 64D 
         self.bn1 = nn.BatchNorm1d(VIDEO_HID_DIM)
         self.dropout = nn.Dropout(DROPOUT_RATE)
 
@@ -125,16 +127,20 @@ class SimplifiedVideoEncoder(nn.Module):
 
 class AttentionFusion(nn.Module):
     def __init__(self):
-        super().__init__()
-        self.text_projection = nn.Linear(TEXT_HID_DIM, FUSION_OUT_DIM)
-        self.video_projection = nn.Linear(VIDEO_HID_DIM, FUSION_OUT_DIM)
-        self.attention = nn.Linear(FUSION_OUT_DIM * 2, 2)
+        super().__init__() 
+        self.text_projection = nn.Linear(TEXT_HID_DIM, FUSION_OUT_DIM) #transforms the 32-dimensional text features into a common representation space for fusion.
+        self.video_projection = nn.Linear(VIDEO_HID_DIM, FUSION_OUT_DIM) #Transforms the 64-dimensional video features into the same common space as the text features.
+        self.attention = nn.Linear(FUSION_OUT_DIM * 2, 2)# Produces the attention weights that determine the relative importance of the text and video features. Input: FUSION_OUT_DIM * 2 (64, since it takes the concatenated output of the projected text and video features); Output: 2 (because it needs to generate two attention weights, one for text and one for video)
+
 
     def forward(self, text_features, video_features):
+        # Projecting features
         text_proj = torch.relu(self.text_projection(text_features))
         video_proj = torch.relu(self.video_projection(video_features))
+        # Concatenating for attention calculation
         combined = torch.cat([text_proj, video_proj], dim=1)
         attention_weights = torch.softmax(self.attention(combined), dim=1)
+        # Applying attention weights to the respective features
         fused = attention_weights[:, 0].unsqueeze(1) * text_proj + \
                 attention_weights[:, 1].unsqueeze(1) * video_proj
         return fused
@@ -145,7 +151,7 @@ class SimplifiedModel(nn.Module):
         self.text_encoder = SimplifiedTextEncoder(text_dim)
         self.video_encoder = SimplifiedVideoEncoder(video_dim)
         self.fusion = AttentionFusion()
-        self.classifier = nn.Linear(FUSION_OUT_DIM, num_classes)
+        self.classifier = nn.Linear(FUSION_OUT_DIM, num_classes) # Input: The 32D fused representation; Output: Scores for each emotion class;  Activation: Softmax (not shown in code but applied during training/inference); Result: Probability distribution over emotion classes. 
         self.dropout = nn.Dropout(DROPOUT_RATE)
 
     def forward(self, text_input, video_input):

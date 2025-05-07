@@ -1,0 +1,4 @@
+Anger: 29
+Ridicule: 63
+Sad: 14
+Surprise: 118
