@@ -188,7 +188,3 @@ def main(json_path, output_file_for_training="Outputs/unlabeled/training_data.tx
 if __name__ == "__main__":
     json_path = "Data/unlabeled_train_data.json" 
     embeddings, unlabelled_df = main(json_path)
-
-
-
-

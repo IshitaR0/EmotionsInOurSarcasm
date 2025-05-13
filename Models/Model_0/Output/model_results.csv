@@ -1,0 +1,2 @@
+train_size,val_size,test_size,validation_accuracy,test_accuracy
+1788,224,223,0.5178571428571429,0.5291479820627802
