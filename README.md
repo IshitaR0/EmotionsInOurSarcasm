@@ -5,7 +5,6 @@
 
 This project tackles the task of recognizing underlying emotions in sarcastic, code-mixed (Hinglish) conversations using multimodal data. 
 
-
 ## Key Features
 
 - Using both text and video modality.
