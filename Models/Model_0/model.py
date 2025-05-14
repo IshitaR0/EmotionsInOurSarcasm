@@ -65,6 +65,9 @@ X_test_text = df3.values
 df4_vid = pd.read_csv("Embeddings/Videos/test/test_embeddings.csv")
 X_test_vids = df4_vid.values
 
+df5 = pd.read_csv("Embeddings/Labels/test_labels.csv")
+y_test = df5.values.ravel()
+
 # Handle potential size mismatches in test data
 if X_test_text.shape[0] != X_test_vids.shape[0]:
     min_samples = min(X_test_text.shape[0], X_test_vids.shape[0])
@@ -74,8 +77,9 @@ if X_test_text.shape[0] != X_test_vids.shape[0]:
 
 X_test = np.concatenate((X_test_text, X_test_vids), axis=1)
 
-df5 = pd.read_csv("Embeddings/Labels/test_labels.csv")
-y_test = df5.values.ravel()
+#----------------------------------------------------------------------------------------
+# Use the file path utils/scripts/Video/cnn_embeddings.py for custom CNN video embeddings
+#----------------------------------------------------------------------------------------
 
 # Handle potential mismatch between features and labels
 if X_test.shape[0] != y_test.shape[0]:

@@ -303,6 +303,8 @@ def main():
     parser.add_argument('--val_labels',  default='Embeddings/Labels/val_labels.csv')
     args = parser.parse_args()
     
+    # Use the file path utils/scripts/Video/cnn_embeddings.py for custom CNN video embeddings
+    
     # Create output directory
     os.makedirs(args.output_dir, exist_ok=True)
     
