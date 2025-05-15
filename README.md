@@ -60,7 +60,7 @@ EmotionsInOurSarcasm/
 ### Feature Extraction
 - `utils/scripts/Text`: This folder contains the script to generate FastText embeddings for text modality.
 - `utils/scripts/Video/embeddings.py`: This script generates vector embeddings for video modality using ResNet50 after extracting keyframes using OpenCV and averaging them.
-- `utils/scripts/Video/embeddings.py`: This acript generates vector embeddings for video modality using our custom CNN.
+- `utils/scripts/Video/cnn_embeddings.py`: This script generates vector embeddings for video modality using our custom CNN.
 
 ### Models
 - `models/Model_0`: Implementation of Random Forest Classifier model and it's output. 
