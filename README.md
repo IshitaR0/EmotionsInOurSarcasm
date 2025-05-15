@@ -1,4 +1,4 @@
-# Emotion Recognition in Code-Mixed (Hinglish) Sarcastic conversations
+# Emotion Recognition in Sarcastic Code-Mixed (Hinglish) conversations
 
 
 ## Overview
@@ -95,7 +95,7 @@ pip install -r requirements.txt
 
 - Include audio modality for enhanced performance
 - Address underrepresented emotion classes
-
+- Include more emotion classes
 
 ## Contributors
 
