@@ -6,9 +6,9 @@ import os
 
 # File paths for train, test, and val datasets
 files = {
-    "train": "/Users/anjelica/Downloads/labeled_train_datafinal.json",
-    "test": "/Users/anjelica/Downloads/test_data (1).json",
-    "val": '/Users/anjelica/Downloads/val_data (1) (1).json'
+    "train": "/labeled_train_datafinal.json",
+    "test": "/test_data.json",
+    "val": '/val_data.json'
 }
 
 # Create a main output folder
