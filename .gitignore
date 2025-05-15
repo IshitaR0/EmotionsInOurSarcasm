@@ -30,3 +30,6 @@ model.py
 missing
 raw
 fasttext_input_train.txt
+cnn
+embeddings
+labels
