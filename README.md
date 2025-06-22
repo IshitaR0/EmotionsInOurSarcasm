@@ -63,8 +63,8 @@ EmotionsInOurSarcasm/
 - `utils/scripts/Video/cnn_embeddings.py`: This script generates vector embeddings for video modality using our custom CNN.
 
 ### Models
-- `models/Model_0`: Implementation of Random Forest Classifier model and it's output. 
-- `models/Model_1`: Implementation of Shallow Neural Network with Attention Fusion Mechanism (SNN-AFM) and it's output.
+- `Models/Model_0`: Implementation of Random Forest Classifier model and it's output. 
+- `Models/Model_1`: Implementation of Shallow Neural Network with Attention Fusion Mechanism (SNN-AFM) and it's output.
 
 
 ## Performance Metrics
